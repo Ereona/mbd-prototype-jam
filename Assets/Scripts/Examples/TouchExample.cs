@@ -88,5 +88,12 @@ namespace MurderByDeath.Examples
         {
             Debug.Log(_pinch.accumulatedScale + " IS THE FULL ACCUMULATIVE PINCH SCALE SINCE STARTING THE PINCH GESTURE");
         }
+        private void OnDestroy()
+        {
+            _eventControl.pinchRecognizer.gestureRecognizedEvent -= (Pinch);
+            _eventControl.dragRecognizer.gestureRecognizedEvent -= (Drag);
+            _eventControl.tapRecognizer.gestureRecognizedEvent -= (Tap);
+            _eventControl.swipeRecognizer.gestureRecognizedEvent -= (Swipe);
+        }
     }
 }

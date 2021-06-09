@@ -23,7 +23,6 @@ namespace MurderByDeath.Events
             dragRecognizer = new TKDragRecognizer();
             tapRecognizer = new TKTapRecognizer();
 
-
             TouchKit.addGestureRecognizer(pinchRecognizer);
             TouchKit.addGestureRecognizer(swipeRecognizer);
             TouchKit.addGestureRecognizer(dragRecognizer);
