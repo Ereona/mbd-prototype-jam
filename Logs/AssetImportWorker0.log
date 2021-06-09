@@ -3061,3 +3061,27 @@ System memory in use after: 157.2 MB.
 Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2112.
 Total: 2.672009 ms (FindLiveObjects: 0.320558 ms CreateObjectMapping: 0.100152 ms MarkObjects: 2.146719 ms  DeleteObjects: 0.103611 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 14791.739295 seconds.
+  path: Assets/Scripts/Events/EventController.cs
+  artifactKey: Guid(747ffdc76a15347f5a030b38c2e2f10e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Events/EventController.cs using Guid(747ffdc76a15347f5a030b38c2e2f10e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17fee57b790c2b4c14babf111b0a8b91') in 0.007255 seconds
+  Import took 0.010239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003086 seconds.
+  path: Assets/Scripts/Events/EventController.cs
+  artifactKey: Guid(747ffdc76a15347f5a030b38c2e2f10e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Events/EventController.cs using Guid(747ffdc76a15347f5a030b38c2e2f10e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17fee57b790c2b4c14babf111b0a8b91') in 0.004681 seconds
+  Import took 0.007662 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 71.791056 seconds.
+  path: Packages/com.unity.nuget.newtonsoft-json
+  artifactKey: Guid(7e7d2b05dd6ea119ce16861d56d99a82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.nuget.newtonsoft-json using Guid(7e7d2b05dd6ea119ce16861d56d99a82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa4b8fa352b752a3e644067b33aa63ec') in 0.002856 seconds
+  Import took 0.005983 seconds .
+
