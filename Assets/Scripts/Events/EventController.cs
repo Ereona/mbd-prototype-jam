@@ -5,35 +5,23 @@ namespace MurderByDeath.Events
 {
     public class EventController : MonoBehaviour
     {
-        #region Touch Events Declaration
-
-        public TKPinchRecognizer pinchRecognizer;
-        public TKSwipeRecognizer swipeRecognizer;
-        public TKDragRecognizer dragRecognizer;
-        public TKTapRecognizer tapRecognizer;
-
-        #endregion
+        public UnityEvent myEvent;
 
         private void Awake()
         {
-            #region Touch Events Initialization
+            if(myEvent == null)
+                myEvent = new UnityEvent();
+        }
 
-            pinchRecognizer = new TKPinchRecognizer();
-            swipeRecognizer = new TKSwipeRecognizer();
-            dragRecognizer = new TKDragRecognizer();
-            tapRecognizer = new TKTapRecognizer();
-
-            TouchKit.addGestureRecognizer(pinchRecognizer);
-            TouchKit.addGestureRecognizer(swipeRecognizer);
-            TouchKit.addGestureRecognizer(dragRecognizer);
-            TouchKit.addGestureRecognizer(tapRecognizer);
-
-            #endregion
+        public void DispatchUnityEvent(UnityEvent _e)
+        {
+            if(_e != null)
+                _e.Invoke();
         }
 
         private void OnDestroy()
         {
-            TouchKit.removeAllGestureRecognizers();
+            myEvent.RemoveAllListeners();
         }
     }
 }

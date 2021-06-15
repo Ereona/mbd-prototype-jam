@@ -1,33 +1,22 @@
 using UnityEngine;
-using MurderByDeath.Events;
+using MurderByDeath.Touch;
 
 namespace MurderByDeath.Examples
 {
     public class TouchExample : MonoBehaviour
     {
-        [SerializeField] private EventController _eventControl;
-
-        [SerializeField] private GameObject _eventControlPrefab;
+        [SerializeField] private TouchGestures _touchGestures;
 
         // Start is called before the first frame update
         void Start()
         {
-            if(_eventControl == null)
-            {
-                GameObject _e = GameObject.FindWithTag("EventController");
-
-                if(_e == null)
-                    _e = Instantiate(_eventControlPrefab);
-                
-                _eventControl = _e.GetComponent<EventController>();
-            }
-            _eventControl.pinchRecognizer.gestureRecognizedEvent += (Pinch);
-            _eventControl.dragRecognizer.gestureRecognizedEvent += (Drag);
-            _eventControl.tapRecognizer.gestureRecognizedEvent += (Tap);
-            _eventControl.swipeRecognizer.gestureRecognizedEvent += (Swipe);
+            _touchGestures.pinchRecognizer.gestureRecognizedEvent += (Pinch);
+            _touchGestures.dragRecognizer.gestureRecognizedEvent += (Drag);
+            _touchGestures.tapRecognizer.gestureRecognizedEvent += (Tap);
+            _touchGestures.swipeRecognizer.gestureRecognizedEvent += (Swipe);
 
             //restrict the drag recognizer to the lower left side of the screen
-			_eventControl.dragRecognizer.boundaryFrame = new TKRect( 0, 0, Screen.width * 0.5f, Screen.height * 0.5f );
+			_touchGestures.dragRecognizer.boundaryFrame = new TKRect( 0, 0, Screen.width * 0.5f, Screen.height * 0.5f );
 
             GetComponent<TouchKit>().autoScaleRectsAndDistances = true;
         }
@@ -90,10 +79,10 @@ namespace MurderByDeath.Examples
         }
         private void OnDestroy()
         {
-            _eventControl.pinchRecognizer.gestureRecognizedEvent -= (Pinch);
-            _eventControl.dragRecognizer.gestureRecognizedEvent -= (Drag);
-            _eventControl.tapRecognizer.gestureRecognizedEvent -= (Tap);
-            _eventControl.swipeRecognizer.gestureRecognizedEvent -= (Swipe);
+            _touchGestures.pinchRecognizer.gestureRecognizedEvent -= (Pinch);
+            _touchGestures.dragRecognizer.gestureRecognizedEvent -= (Drag);
+            _touchGestures.tapRecognizer.gestureRecognizedEvent -= (Tap);
+            _touchGestures.swipeRecognizer.gestureRecognizedEvent -= (Swipe);
         }
     }
 }
