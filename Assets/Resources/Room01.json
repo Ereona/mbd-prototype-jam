@@ -1,0 +1,26 @@
+{
+    "objects": [
+        {
+            "objectId": "Book01",
+            "contextMenu": [
+                {
+                    "text": "TAKE",
+                    "actionName": "Take"
+                },
+				{
+                    "text": "READ",
+                    "actionName": "Read"
+                }
+            ]
+        },
+		{
+            "objectId": "Door01",
+            "contextMenu": [
+                {
+                    "text": "OPEN",
+                    "actionName": "Open"
+                }
+            ]
+        }
+    ]
+}

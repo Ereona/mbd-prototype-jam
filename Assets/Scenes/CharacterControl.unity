@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ad74ada5ce3f84b852875b49f6a870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlayer: {fileID: 130162312}
+  _activePlayer: {fileID: 130162312}
 --- !u!114 &327536137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765a6a49715628b45990efb4ac1f7fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startMovingDelay: 0.2
 --- !u!114 &327536138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +286,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   goToTargetEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  interactiveObjectClickEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &327536139
